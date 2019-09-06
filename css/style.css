@@ -90,7 +90,7 @@ body{
 
 .wrapper{
     width: 100vw;
-    /*height: 100vh;*/
+    /*min-height: 100vh;*/
     position: relative;
     display: flex;
     flex-flow: column nowrap;
@@ -101,13 +101,17 @@ body{
 /*////////////////////////////////////////////*/
 
 
+/*########################################################################*/
+/*############################ P H O N E #################################*/
+/*########################################################################*/
+
 /*++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++ N A V B A R +++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++*/
 
 .navbar{
     width: 100%;
-    height: 12vh;
+    height: 10vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -122,32 +126,32 @@ body{
     background: linear-gradient(180deg, rgba(28, 28, 28, 0.5) 60%, rgba(28, 28, 28, 0));
 }
 .navbar-scroll{
-    height: 8vh;
+    height: 6vh;
     background-color: var(--black-color);
 }
 .navbar-scroll #navbar-logo-img{
-    margin-left: 100px;
+    margin-left: 20px;
 }
 /*.navbar-scroll .navbar-logo{
     display: none;
 }*/
 
 .navbar-logo{
-    width: 65%;
+    width: 30%;
     height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 #navbar-logo-img{
-    height: 70%;
-    margin-left: 50px;
+    height: 50%;
+    margin-left: 15px;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .navbar-menu{
-    width: 30%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -164,14 +168,7 @@ body{
     opacity: 0.6;
     padding: 10px;
     cursor: pointer;
-    transition: opacity 0.5s;
 }
-.navbar-menu a:hover{
-    opacity: 1;
-}
-/*.navbar-scroll a{
-    color: var(--white-color);
-}*/
 
 /*++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++ H E A D E R +++++++++++++++++*/
@@ -187,7 +184,7 @@ body{
     overflow: hidden;
 }
 .index-header img{
-    width: 100%;
+    height: 100%;
     filter: grayscale(1) brightness(0.4);
 }
 
@@ -203,14 +200,16 @@ body{
 }
 .header-text h1{
     font-family: var(--font-title);
-    font-size: 2.8em;
+    font-size: 1.5em;
     color: var(--yellow-color);
+    margin: 5%;
+    text-align: center;
 }
 .header-text p{
-    width: 40%;
+    width: 60%;
     margin-top: 2%;
     font-family: var(--font-text);
-    font-size: 1.5em;
+    font-size: 1em;
     color: var(--white-color);
     text-align: justify;
 }
@@ -235,15 +234,15 @@ body{
 }
 
 .haptico-warning{
-    width: 30%;
+    width: 80%;
     padding: 10px;
     background-color: var(--yellow-color);
 }
 .haptico-warning h1{
     font-family: var(--font-text);
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 700;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     color: var(--yellow-color);
     background-color: var(--black-color);
     padding: 10px;
@@ -253,7 +252,7 @@ body{
     width: 80%;
     margin: 0 auto;
     font-family: var(--font-text);
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-weight: 700;
     font-variant: small-caps;
     color: var(--black-color);
@@ -269,33 +268,35 @@ body{
     width: 100%;
     height: 90vh;
     display: flex;
+    flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--white-color);
 }
 .proposito-wrapper > img{
-    height: 80%;
+    width: 70%;
 }
 .proposito-info{
-    width: 35%;
+    width: 90%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
+    align-items: center;
     /*padding-left: 5%;*/
 }
 .proposito-info h1{
     font-family: var(--font-title);
-    font-size: 2em;
+    font-size: 1.2em;
     color: var(--black-color);
 }
 .proposito-info p{
-    margin-top: 10%;
-    width: 60%;
+    margin-top: 3%;
+    width: 90%;
     font-family: var(--font-text);
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 700;
     color: var(--black-color);
-    text-align: justify;
+    text-align: start;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++*/
@@ -311,7 +312,7 @@ body{
     justify-content: center;
 }
 .footer-content{
-    width: 90%;
+    width: 95%;
     height: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -320,8 +321,118 @@ body{
 }
 .footer-content p{
     font-family: var(--font-text);
-    font-size: 0.8em;
+    font-size: 0.5em;
     font-weight: 700;
     color: var(--white-color);
     opacity: 0.5;
+}
+
+
+/*########################################################################*/
+/*########################## D E S K T O P ###############################*/
+/*########################################################################*/
+
+@media only screen and (min-width: 1025px){
+
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
+    /*++++++++++++++ N A V B A R +++++++++++++++++*/
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
+
+    .navbar{
+        height: 12vh;
+    }
+    .navbar-scroll{
+        height: 8vh;
+    }
+    .navbar-scroll #navbar-logo-img{
+        margin-left: 100px;
+    }
+
+    .navbar-logo{
+        width: 65%;
+    }
+    #navbar-logo-img{
+        height: 70%;
+        margin-left: 50px;
+    }
+
+    .navbar-menu{
+        width: 30%;
+    }
+    .navbar-menu a{
+        transition: opacity 0.5s;
+    }
+    .navbar-menu a:hover{
+        opacity: 1;
+    }
+
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
+    /*++++++++++++++ H E A D E R +++++++++++++++++*/
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
+
+    .index-header img{
+        width: 100%;
+        height: unset;
+    }
+
+    .header-text h1{
+        font-size: 2.8em;
+        margin: 0;
+    }
+    .header-text p{
+        width: 40%;
+        font-size: 1.5em;
+    }
+
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
+    /*++++++++++++++ H A P T I C O +++++++++++++++++*/
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
+
+    .haptico-warning{
+        width: 30%;
+    }
+    .haptico-warning h1{
+        font-size: 3em;
+        letter-spacing: 5px;
+    }
+    .haptico-warning p{
+        font-size: 2.5em;
+    }
+
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
+    /*++++++++++++++ P R O P O S I T O +++++++++++++++++*/
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
+
+    .proposito-wrapper{
+        flex-flow: row nowrap;
+    }
+    .proposito-wrapper > img{
+        width: unset;
+        height: 80%;
+    }
+    .proposito-info{
+        width: 35%;
+        align-items: unset;
+    }
+    .proposito-info h1{
+        font-size: 2em;
+    }
+    .proposito-info p{
+        margin-top: 10%;
+        width: 60%;
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
+    /*++++++++++++++ F O O T E R +++++++++++++++++*/
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
+
+    .footer-content{
+        width: 90%;
+    }
+    .footer-content p{
+        font-size: 0.8em;
+    }
+
 }
