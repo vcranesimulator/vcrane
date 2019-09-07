@@ -114,7 +114,8 @@ body{
     height: 10vh;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -151,23 +152,42 @@ body{
 }
 
 .navbar-menu{
-    width: 70%;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
+    background-color: var(--black-color);
+    transform: translateY(-100%);
+    transition: 1s;
+}
+.navbar-menu-active{
+    transform: translateY(0);
 }
 .navbar-menu a{
     text-align: center;
     text-decoration: none;
     font-family: var(--font-text);
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: 700;
     color: var(--yellow-color);
-    opacity: 0.6;
     padding: 10px;
     cursor: pointer;
+}
+
+#navbar-burguer{
+    width: 20%;
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--yellow-color);
+    transition: 1s;
+}
+.navbar-scroll #navbar-burguer{
+    font-size: 1.2em;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++*/
@@ -357,13 +377,23 @@ body{
     }
 
     .navbar-menu{
+        position: initial;
         width: 30%;
+        height: 100%;
+        flex-flow: row nowrap;
+        background: transparent;
+        transform: translateY(0);
     }
     .navbar-menu a{
+        font-size: 0.8em;
         transition: opacity 0.5s;
     }
     .navbar-menu a:hover{
-        opacity: 1;
+        opacity: 0.5;
+    }
+
+    #navbar-burguer{
+        display: none;
     }
 
     /*++++++++++++++++++++++++++++++++++++++++++++*/
