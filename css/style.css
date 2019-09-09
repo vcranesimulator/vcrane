@@ -70,6 +70,10 @@
 /*///////////// S T Y L E //////////////////*/
 /*////////////////////////////////////////////*/
 
+/*html{
+    scroll-behavior: smooth;
+}*/
+
 *{
     margin: 0;
     padding: 0;
@@ -281,12 +285,52 @@ body{
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++ D E S C R I P C I O N +++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++*/
+
+.descripcion-wrapper{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.descripcion-wrapper img{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    filter: brightness(0.2);
+}
+.descripcion-wrapper h1{
+    width: 90%;
+    font-family: var(--font-title);
+    font-size: 1em;
+    color: var(--white-color);
+    text-align: center;
+}
+.descripcion-wrapper p{
+    width: 80%;
+    font-family: var(--font-text);
+    font-size: 0.9em;
+    color: var(--yellow-color);
+    text-align: start;
+}
+
+.descripcion-wrapper .vcrane-text{
+    color: var(--yellow-color);
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++ P R O P O S I T O +++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++*/
 
 .proposito-wrapper{
     width: 100%;
-    height: 90vh;
+    height: 110vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
@@ -369,7 +413,7 @@ body{
     }
 
     .navbar-logo{
-        width: 65%;
+        width: 40%;
     }
     #navbar-logo-img{
         height: 70%;
@@ -378,7 +422,7 @@ body{
 
     .navbar-menu{
         position: initial;
-        width: 30%;
+        width: 35%;
         height: 100%;
         flex-flow: row nowrap;
         background: transparent;
@@ -430,6 +474,24 @@ body{
     }
 
     /*++++++++++++++++++++++++++++++++++++++++++++*/
+    /*++++++++ D E S C R I P C I O N +++++++++++++*/
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
+
+    .descripcion-wrapper img{
+        width: 100%;
+        height: unset;
+    }
+    .descripcion-wrapper h1{
+        width: 85%;
+        font-size: 2em;
+    }
+    .descripcion-wrapper p{
+        width: 70%;
+        font-size: 1.5em;
+        text-align: justify;
+    }
+
+    /*++++++++++++++++++++++++++++++++++++++++++++*/
     /*++++++++++++++ P R O P O S I T O +++++++++++++++++*/
     /*++++++++++++++++++++++++++++++++++++++++++++*/
 
@@ -438,20 +500,20 @@ body{
     }
     .proposito-wrapper > img{
         width: unset;
-        height: 80%;
+        height: 70%;
     }
     .proposito-info{
-        width: 35%;
+        width: 40%;
         align-items: unset;
     }
     .proposito-info h1{
         font-size: 2em;
     }
     .proposito-info p{
-        margin-top: 10%;
-        width: 60%;
+        margin-top: 6%;
+        width: 65%;
         font-size: 1em;
-        text-align: justify;
+        text-align: start;
     }
 
     /*++++++++++++++++++++++++++++++++++++++++++++*/

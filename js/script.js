@@ -39,6 +39,24 @@ function toggleMenu() {
 }
 
 navbarBurguer.addEventListener("click", toggleMenu);
+
 menuLinks.forEach(element => {
-    element.addEventListener("click", toggleMenu);
+
+    element.addEventListener("click", function () {
+
+        window.event.preventDefault();
+
+        var target = element.getAttribute("href");
+        var section = document.querySelector(target);
+
+        window.scrollTo({
+            top: section.offsetTop,
+            left: 0,
+            behavior: "smooth"
+        });
+
+        toggleMenu();
+
+    }, false);
+
 });
