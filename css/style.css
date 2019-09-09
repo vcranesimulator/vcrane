@@ -480,6 +480,7 @@ body{
     .descripcion-wrapper img{
         width: 100%;
         height: unset;
+        top: -50%;
     }
     .descripcion-wrapper h1{
         width: 85%;
